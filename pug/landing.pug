@@ -13,11 +13,11 @@ html
             if usuario
                 a Hola #{usuario}
             else
-            a.boton Registro
+                a.boton Registro
         section.intro
             .intro__imagen: img(src="images/imagen.png")
             .intro__contenido
-                h2= titulos[0]
+                h2 #{titulos[0]}
                 p
                     | Lorem ipsum dolor sit, amet
                     | consectetur adipisicing elit. Sit
@@ -28,6 +28,19 @@ html
                     | perferendis ad dolor amet tempora.
                     span Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, voluptate!
                 a.boton Leer más
-        ul
-            each titulo in titulos
-                li=titulo
+        main.contenido
+                .caja
+                    .caja__imagen:  img(src="images/imagen.png")
+                    .caja__contenido
+                        h3 #{titulos[1]}
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit delectus commodi quidem nam beatae ab fuga. Consequuntur rem necessitatibus eos
+                .caja
+                    .caja__imagen:  img(src="images/imagen.png")
+                    .caja__contenido
+                        h3 #{titulos[1]}
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit delectus commodi quidem nam beatae ab fuga. Consequuntur rem necessitatibus eos
+                .caja
+                    .caja__imagen:  img(src="images/imagen.png")
+                    .caja__contenido
+                        h3 #{titulos[1]}
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit delectus commodi quidem nam beatae ab fuga. Consequuntur rem necessitatibus eos
