@@ -1,7 +1,12 @@
 -var titulo = "Título principal"
 -var titulos = ["Titulo principal", "Subtitulo 1", "Subtitulo 2", "Subtitulo 3"]
--var usuario = "David"
-
+mixin caja(imagen,titulo,contenido)
+    .caja
+        .caja__imagen:  img(src="images/"+imagen)
+        .caja__contenido
+            h3=titulo
+            p=contenido
+            a.buton Leer más
 doctype html
 html
     head
@@ -29,18 +34,7 @@ html
                     span Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, voluptate!
                 a.boton Leer más
         main.contenido
-                .caja
-                    .caja__imagen:  img(src="images/imagen.png")
-                    .caja__contenido
-                        h3 #{titulos[1]}
-                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit delectus commodi quidem nam beatae ab fuga. Consequuntur rem necessitatibus eos
-                .caja
-                    .caja__imagen:  img(src="images/imagen.png")
-                    .caja__contenido
-                        h3 #{titulos[1]}
-                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit delectus commodi quidem nam beatae ab fuga. Consequuntur rem necessitatibus eos
-                .caja
-                    .caja__imagen:  img(src="images/imagen.png")
-                    .caja__contenido
-                        h3 #{titulos[1]}
-                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit delectus commodi quidem nam beatae ab fuga. Consequuntur rem necessitatibus eos
+            +caja('imagen.png', titulos[1], 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.')
+            +caja('imagen.png', titulos[2], 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.')
+            +caja('imagen.png', titulos[3], 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.')
+            
